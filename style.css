@@ -121,9 +121,23 @@ h3 {
 
 /* PRICES */
 
+/* PRICES — split solo/duo */
+.price-group {
+  margin-bottom: 60px;
+}
+
+.group-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Each price-grid stays 3 in a row */
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
 }
 
@@ -144,10 +158,6 @@ h3 {
   margin-top: 20px;
   font-size: 1.7rem;
   color: var(--gold);
-}
-
-.highlight {
-  border: 1px solid var(--gold);
 }
 
 /* GALLERY */
