@@ -23,7 +23,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: url("hero.jpg") center/cover no-repeat;
+  background: var(--dark) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,8 +230,39 @@ h3 {
   text-align: center;
 }
 
-.contact p strong {
-  font-size: 1.1rem;
+.contact p {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* container */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* each row */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+}
+
+/* icons */
+.contact-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.contact-item:hover img {
+  border-color: var(--gold);
 }
 
 /* FOOTER */
@@ -241,7 +272,7 @@ footer {
   padding: 30px;
   font-size: 0.85rem;
   opacity: 0.6;
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--soft-dark);
 }
 
 /* RESPONSIVE */
