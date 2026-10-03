@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <!-- NAV -->
     <nav class="nav" id="nav">
       <a href="#top" class="logo">Duo <em>Far Niente</em></a>
@@ -57,11 +58,13 @@
       </div>
       <div class="hero-media">
         <div class="arch">
-          <img
-            src="src/web/hero.jpg"
-            alt="Nadezhda and Anton standing back to back with electric violins in front of Rodin's Gates of Hell"
-            fetchpriority="high"
-          />
+          <div class="arch-clip">
+            <img
+              src="src/web/hero.jpg"
+              alt="Nadezhda and Anton standing back to back with electric violins in front of Rodin's Gates of Hell"
+              fetchpriority="high"
+            />
+          </div>
         </div>
       </div>
     </header>
@@ -80,7 +83,7 @@
       <div class="about-grid">
         <article class="person reveal">
           <div class="frame">
-            <img src="src/web/photo1.jpg" alt="Nadezhda Skokova" loading="lazy" />
+            <div class="frame-clip"><img src="src/web/photo1.jpg" alt="Nadezhda Skokova" loading="lazy" /></div>
           </div>
           <h3>Nadezhda Skokova</h3>
           <p>
@@ -95,7 +98,7 @@
 
         <article class="person reveal">
           <div class="frame">
-            <img src="src/web/photo2.jpg" alt="Anton Demyshev" loading="lazy" />
+            <div class="frame-clip"><img src="src/web/photo2.jpg" alt="Anton Demyshev" loading="lazy" /></div>
           </div>
           <h3>Anton Demyshev</h3>
           <p>
@@ -399,6 +402,51 @@
         { threshold: 0.12 }
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Stagger siblings that reveal together (cards, tiles, videos)
+      document
+        .querySelectorAll(".about-grid, .price-grid, .gallery-grid, .video-grid")
+        .forEach((group) =>
+          [...group.querySelectorAll(":scope > .reveal")].forEach((el, i) => {
+            el.style.setProperty("--d", `${i * 120}ms`);
+          })
+        );
+
+      // Scroll-linked motion: progress line, hero parallax, portrait drift
+      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const root = document.documentElement;
+      const hero = document.querySelector(".hero");
+      const portraits = [...document.querySelectorAll(".frame-clip img")];
+      let ticking = false;
+
+      const update = () => {
+        ticking = false;
+        const y = window.scrollY;
+        const vh = window.innerHeight;
+        const max = root.scrollHeight - vh;
+        root.style.setProperty("--scroll", max > 0 ? (y / max).toFixed(4) : 0);
+        if (reduceMotion) return;
+        const hp = Math.min(1, Math.max(0, y / hero.offsetHeight));
+        hero.style.setProperty("--hp", hp.toFixed(4));
+        portraits.forEach((img) => {
+          const r = img.parentElement.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > vh) return;
+          const offset = (r.top + r.height / 2 - vh / 2) / vh;
+          img.style.setProperty("--py", `${(offset * -40).toFixed(1)}px`);
+        });
+      };
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+          }
+        },
+        { passive: true }
+      );
+      window.addEventListener("resize", update);
+      update();
 
       // Gallery lightbox
       const box = document.getElementById("lightbox");
