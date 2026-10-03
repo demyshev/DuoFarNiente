@@ -263,7 +263,7 @@
     <section class="contact" id="contact">
       <div class="contact-card reveal">
         <p class="eyebrow">Contact us</p>
-        <h2>Let's make your day <em>sing</em></h2>
+        <h2>Reserve your <em>date</em></h2>
         <p class="section-sub">
           Tell us about your event and we will get back to you with
           availability.
@@ -306,9 +306,17 @@
             <label for="f-time">Approx. start time</label>
             <input id="f-time" name="start_time" type="time" step="900" />
           </div>
-          <div class="field full">
+          <div class="field">
             <label for="f-place">Venue or city</label>
             <input id="f-place" name="venue" type="text" placeholder="e.g. Villa Montalvo, Saratoga" required />
+          </div>
+          <div class="field">
+            <label for="f-indoor">Setting</label>
+            <select id="f-indoor" name="setting">
+              <option>Indoors</option>
+              <option>Outdoors</option>
+              <option>Both / not sure</option>
+            </select>
           </div>
           <div class="field">
             <label for="f-format">Solo or duo</label>
@@ -325,18 +333,6 @@
               <option>Up to 2 hours</option>
               <option>Up to 3 hours</option>
               <option>Not sure yet</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="f-guests">Guests <span>(approx.)</span></label>
-            <input id="f-guests" name="guests" type="number" min="1" inputmode="numeric" />
-          </div>
-          <div class="field">
-            <label for="f-indoor">Setting</label>
-            <select id="f-indoor" name="setting">
-              <option>Indoors</option>
-              <option>Outdoors</option>
-              <option>Both / not sure</option>
             </select>
           </div>
           <div class="field full">
