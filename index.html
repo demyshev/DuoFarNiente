@@ -4,34 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Duo Far Niente – Live Music for Weddings & Events</title>
+    <meta
+      name="description"
+      content="Duo Far Niente: classically trained electric violinists playing weddings and private events across the Bay Area, California."
+    />
+    <meta property="og:title" content="Duo Far Niente – Live Violin for Weddings & Events" />
+    <meta
+      property="og:description"
+      content="Classically trained electric violin duo. Weddings and private events, Bay Area, California."
+    />
+    <meta property="og:image" content="src/web/gallery6.jpg" />
+    <meta name="theme-color" content="#0e0c0a" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230e0c0a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23c9a96a'%3EFN%3C/text%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="overlay">
-        <p class="subtitle">LIVE MUSIC FOR WEDDINGS AND PRIVATE EVENTS</p>
-        <h1>Duo Far Niente</h1>
-        <p class="description">
-          Classically trained electric violinists with a repertoire of 200
-          songs<br />
-          Bay Area, California
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a href="#top" class="logo">Duo <em>Far Niente</em></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#prices">Prices</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#contact" class="nav-cta">Book</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="top">
+      <div class="hero-text">
+        <p class="eyebrow">Live music for weddings &amp; private events</p>
+        <h1>Duo <em>Far Niente</em></h1>
+        <p class="lead">
+          Classically trained electric violinists with a repertoire of
+          200&nbsp;songs.
         </p>
-        <a href="#contact" class="btn">Book Now</a>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Check your date</a>
+          <a href="#videos" class="btn btn-ghost">Watch us play</a>
+        </div>
+        <p class="hero-meta">Bay Area, California</p>
+      </div>
+      <div class="hero-media">
+        <div class="arch">
+          <img
+            src="src/web/gallery6.jpg"
+            alt="Anton and Nadezhda playing electric violins in a winery barrel room"
+            fetchpriority="high"
+          />
+        </div>
       </div>
     </header>
 
-    <section class="about">
-      <h2>About Us</h2>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <p class="eyebrow">About us</p>
+        <h2>Two violins, <em>one voice</em></h2>
+        <p class="section-sub">
+          Over 45 years on stage between us, from the Moscow Philharmonic to
+          your first dance.
+        </p>
+      </div>
 
       <div class="about-grid">
-        <div>
-          <img src="src/photo1.jpeg" alt="Nadezhda Skokova" class="about-img" />
+        <article class="person reveal">
+          <div class="frame">
+            <img src="src/web/photo1.jpg" alt="Nadezhda Skokova" loading="lazy" />
+          </div>
           <h3>Nadezhda Skokova</h3>
           <p>
             Nadezhda is a musician with over 25 years of experience in solo,
@@ -41,10 +91,12 @@
             Philharmonic. She has participated in numerous festivals, concerts
             and master classes worldwide.
           </p>
-        </div>
+        </article>
 
-        <div>
-          <img src="src/photo2.png" alt="Anton Demyshev" class="about-img" />
+        <article class="person reveal">
+          <div class="frame">
+            <img src="src/web/photo2.jpg" alt="Anton Demyshev" loading="lazy" />
+          </div>
           <h3>Anton Demyshev</h3>
           <p>
             Anton has over 20 years of experience in orchestral, chamber, and
@@ -53,158 +105,234 @@
             After performing with the Moscow Philharmonic, he formed Duo Far
             Niente in the Bay Area.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="prices">
-      <h2>Prices</h2>
-      <p class="center">We offer both solo and duo options</p>
-
-      <div class="price-group">
-        <h3 class="group-title">Solo</h3>
-        <div class="price-grid">
-          <div class="card">
-            <p>Up to 1 hour</p>
-            <h4>$400</h4>
-          </div>
-          <div class="card">
-            <p>Up to 2 hours</p>
-            <h4>$700</h4>
-          </div>
-          <div class="card">
-            <p>Up to 3 hours</p>
-            <h4>$900</h4>
-          </div>
-        </div>
+    <!-- PRICES -->
+    <section class="prices" id="prices">
+      <div class="section-head reveal">
+        <p class="eyebrow">Prices</p>
+        <h2>Solo or <em>duo</em></h2>
+        <p class="section-sub">
+          Simple hourly packages. No travel fee anywhere in the Bay Area.
+        </p>
       </div>
 
-      <div class="price-group">
-        <h3 class="group-title">Duo</h3>
-        <div class="price-grid">
-          <div class="card">
-            <p>Up to 1 hour</p>
-            <h4>$600</h4>
-          </div>
-          <div class="card">
-            <p>Up to 2 hours</p>
-            <h4>$900</h4>
-          </div>
-          <div class="card">
-            <p>Up to 3 hours</p>
-            <h4>$1,100</h4>
-          </div>
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <h3>Solo</h3>
+          <p class="price-note">One violinist</p>
+          <ul class="price-list">
+            <li><span>Up to 1 hour</span><i></i><strong>$400</strong></li>
+            <li><span>Up to 2 hours</span><i></i><strong>$700</strong></li>
+            <li><span>Up to 3 hours</span><i></i><strong>$900</strong></li>
+          </ul>
+        </div>
+
+        <div class="price-card featured reveal">
+          <h3>Duo</h3>
+          <p class="price-note">Two violinists</p>
+          <ul class="price-list">
+            <li><span>Up to 1 hour</span><i></i><strong>$600</strong></li>
+            <li><span>Up to 2 hours</span><i></i><strong>$900</strong></li>
+            <li><span>Up to 3 hours</span><i></i><strong>$1,100</strong></li>
+          </ul>
         </div>
       </div>
+      <p class="price-footnote reveal">
+        A $100 deposit secures your date.
+        <a href="#contact">Ask about availability</a>
+      </p>
     </section>
 
-    <section class="gallery">
-      <h2>Gallery</h2>
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="section-head reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>On <em>stage</em></h2>
+      </div>
+
       <div class="gallery-grid">
-        <img src="src/gallery1.jpg" alt="Performance 1" />
-        <img src="src/gallery2.png" alt="Performance 2" />
-        <img src="src/gallery3.png" alt="Performance 3" />
-        <img src="src/gallery4.jpg" alt="Performance 4" />
-        <img src="src/gallery5.jpeg" alt="Performance 5" />
-        <img src="src/gallery6.jpeg" alt="Performance 6" />
+        <button class="tile tall reveal" data-full="src/web/gallery1.jpg">
+          <img src="src/web/gallery1.jpg" alt="Anton playing electric violin at a wedding reception" loading="lazy" />
+        </button>
+        <button class="tile wide reveal" data-full="src/web/gallery3.jpg">
+          <img src="src/web/gallery3.jpg" alt="Orchestra performing in a concert hall" loading="lazy" />
+        </button>
+        <button class="tile reveal" data-full="src/web/gallery5.jpg">
+          <img src="src/web/gallery5.jpg" alt="The duo in front of Rodin's Gates of Hell" loading="lazy" />
+        </button>
+        <button class="tile reveal" data-full="src/web/gallery4.jpg">
+          <img src="src/web/gallery4.jpg" alt="The duo performing at an indoor event" loading="lazy" />
+        </button>
+        <button class="tile wide reveal" data-full="src/web/gallery2.jpg">
+          <img src="src/web/gallery2.jpg" alt="Musicians on stage after a symphony concert" loading="lazy" />
+        </button>
       </div>
 
-      <div class="video-section">
-        <h2>Videos</h2>
-
-        <div class="video-wrapper">
-          <iframe
-            src="https://drive.google.com/file/d/14-MNJDputVFAubCBPkfD7k21o9rovhki/preview"
-            allowfullscreen
-          ></iframe>
+      <div class="videos" id="videos">
+        <div class="section-head reveal">
+          <p class="eyebrow">Videos</p>
+          <h2>Hear <em>us</em></h2>
         </div>
-
-        <div class="video-wrapper">
-          <iframe
-            src="https://drive.google.com/file/d/1jPKexRux5dW-OXSIWuZCNqUYMxV5XbIp/preview"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div class="video-wrapper">
-          <iframe
-            src="https://drive.google.com/file/d/1V35UJtelDOnT8LBJy2LJ1n7zzaIqOfrY/preview"
-            allowfullscreen
-          ></iframe>
+        <div class="video-grid">
+          <div class="video-wrapper reveal">
+            <iframe
+              src="https://drive.google.com/file/d/14-MNJDputVFAubCBPkfD7k21o9rovhki/preview"
+              title="Duo Far Niente performance video 1"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-wrapper reveal">
+            <iframe
+              src="https://drive.google.com/file/d/1jPKexRux5dW-OXSIWuZCNqUYMxV5XbIp/preview"
+              title="Duo Far Niente performance video 2"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-wrapper reveal">
+            <iframe
+              src="https://drive.google.com/file/d/1V35UJtelDOnT8LBJy2LJ1n7zzaIqOfrY/preview"
+              title="Duo Far Niente performance video 3"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="faq">
-      <h2>FAQ</h2>
-
-      <div class="faq-item">
-        <h3>How to book us?</h3>
-        <p>
-          Reach out via WhatsApp, Instagram, or email at duofarniente@gmail.com.
-          We request a $100 deposit to secure the date.
-        </p>
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Good to <em>know</em></h2>
       </div>
 
-      <div class="faq-item">
-        <h3>What is in your repertoire?</h3>
-        <p>
-          You can review our current playlist for solo and duo performances -
-          <a
-            href="https://docs.google.com/document/d/1mFMxp7TbGLX9WhOX3ZGTj6wcDRMYMz_iCy8g7f00zqo/edit?tab=t.0"
-            target="_blank"
-            >View Playlist</a
-          >
-        </p>
-      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary>How to book us?</summary>
+          <p>
+            Reach out via WhatsApp, Instagram, or email at
+            <a href="mailto:duofarniente@gmail.com">duofarniente@gmail.com</a>.
+            We request a $100 deposit to secure the date.
+          </p>
+        </details>
 
-      <div class="faq-item">
-        <h3>Can I request a special song?</h3>
-        <p>Yes. Let us know at least 1 week before the event.</p>
-      </div>
+        <details>
+          <summary>What is in your repertoire?</summary>
+          <p>
+            You can review our current playlist for solo and duo performances:
+            <a
+              href="https://docs.google.com/document/d/1mFMxp7TbGLX9WhOX3ZGTj6wcDRMYMz_iCy8g7f00zqo/edit?tab=t.0"
+              target="_blank"
+              rel="noopener"
+              >View playlist</a
+            >
+          </p>
+        </details>
 
-      <div class="faq-item">
-        <h3>Do you travel?</h3>
-        <p>
-          We perform within the U.S. For Bay Area events, there is no additional
-          fee. For other states, travel and accommodation must be covered.
-        </p>
-      </div>
+        <details>
+          <summary>Can I request a special song?</summary>
+          <p>Yes. Let us know at least 1 week before the event.</p>
+        </details>
 
-      <div class="faq-item">
-        <h3>No speakers at the venue?</h3>
-        <p>
-          Not a problem. We bring battery-powered speakers and lights, so we can
-          perform anywhere.
-        </p>
+        <details>
+          <summary>Do you travel?</summary>
+          <p>
+            We perform within the U.S. For Bay Area events, there is no
+            additional fee. For other states, travel and accommodation must be
+            covered.
+          </p>
+        </details>
+
+        <details>
+          <summary>No speakers at the venue?</summary>
+          <p>
+            Not a problem. We bring battery-powered speakers and lights, so we
+            can perform anywhere.
+          </p>
+        </details>
       </div>
     </section>
 
-    <!-- Links -->
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h2>Contact Us</h2>
-      <p>We will be glad to answer your questions.</p>
+      <div class="contact-card reveal">
+        <p class="eyebrow">Contact us</p>
+        <h2>Let's make your day <em>sing</em></h2>
+        <p class="section-sub">
+          Tell us your date and venue. We will be glad to answer your
+          questions.
+        </p>
 
-      <div class="contact-links">
-        <a class="contact-item" href="mailto:duofarniente@gmail.com">
-          <img src="src/contacts/mail.png" alt="Email" />
-          duofarniente@gmail.com
-        </a>
-
-        <a class="contact-item" href="tel:+1-408-585-8586">
-          <img src="src/contacts/phone.png" alt="Phone" />
-          +1 (408) 585-8586
-        </a>
-
-        <a class="contact-item" href="https://www.instagram.com/duo_farniente">
-          <img src="src/contacts/insta.png" alt="Instagram" />
-          @duo_farniente
-        </a>
+        <div class="contact-links">
+          <a class="contact-item" href="mailto:duofarniente@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+            duofarniente@gmail.com
+          </a>
+          <a class="contact-item" href="tel:+14085858586">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>
+            +1 (408) 585-8586
+          </a>
+          <a
+            class="contact-item"
+            href="https://www.instagram.com/duo_farniente"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.6" /></svg>
+            @duo_farniente
+          </a>
+        </div>
       </div>
     </section>
 
     <footer>
-      <p>© 2026 Duo Far Niente | Bay Area, California</p>
+      <p class="logo">Duo <em>Far Niente</em></p>
+      <p>© 2026 Duo Far Niente · Bay Area, California</p>
     </footer>
+
+    <!-- LIGHTBOX -->
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <img alt="" />
+    </dialog>
+
+    <script>
+      // Solid nav once the page scrolls
+      const nav = document.getElementById("nav");
+      const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      // Fade sections in as they enter the viewport
+      const io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Gallery lightbox
+      const box = document.getElementById("lightbox");
+      const boxImg = box.querySelector("img");
+      document.querySelectorAll(".tile").forEach((tile) =>
+        tile.addEventListener("click", () => {
+          boxImg.src = tile.dataset.full;
+          boxImg.alt = tile.querySelector("img").alt;
+          box.showModal();
+        })
+      );
+      box.addEventListener("click", () => box.close());
+    </script>
   </body>
 </html>
